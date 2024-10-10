@@ -1,20 +1,21 @@
 import React from "react";
-import ReactDom from "react-dom/client";
+import ReactDOM from "react-dom/client";
+import Header from "./src/components/Header";
+import Body from "./src/components/Body";
 
-const Title = () => (
-    <h1 className="head" tabIndex="5">
-        Namaste React using JSX
-    </h1>
-);
-
-const HeadingComponent = () => (
-    <div id="container">
-        <Title/>
-        <h1 className="heading" > Namaste react Funtional Component</h1>
-    </div>
-);
+const AppLayout = () => {
+    return(
+        <div className="app">
+            <Header/>
+            <Body/>
+            {/* <Footer/> */}
+        </div>
+    )
+}
 
 
-const root  = ReactDom.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponent/>);
+const root  = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<AppLayout/>)
+
